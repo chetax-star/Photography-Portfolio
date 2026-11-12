@@ -391,6 +391,41 @@ button:focus-visible,
   float: left; padding: 6px 12px 0 0; color: var(--ink);
 }
 
+/* ---------- PERSONAL PROFILE: SKILLS & STRENGTHS ---------- */
+.profile-skills {
+  margin-top: clamp(58px, 8vw, 100px);
+  padding-top: clamp(28px, 4vw, 48px);
+  border-top: 1px solid var(--hair-warm);
+}
+.profile-skills-heading { max-width: 680px; }
+.profile-skills-heading h2 {
+  margin-top: 12px;
+  font: 400 clamp(38px, 5vw, 64px)/1 var(--display);
+  letter-spacing: -.025em;
+}
+.profile-skills-heading h2 em { color: var(--ink-soft); }
+.profile-skills-heading > p:last-child {
+  max-width: 62ch; margin-top: 15px;
+  color: var(--ink-soft); font-size: 14px; line-height: 1.75;
+}
+.profile-skills-grid {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px; margin-top: 32px;
+}
+.profile-skills-grid article {
+  min-height: 160px; padding: 18px 20px 20px;
+  border: 1px solid var(--hair-warm); background: rgba(255,255,255,.22);
+}
+.profile-skills-grid article > span {
+  color: var(--ink-soft); font-size: 10px; letter-spacing: .16em;
+}
+.profile-skills-grid h3 {
+  margin-top: 16px; font: 400 22px/1.15 var(--display);
+}
+.profile-skills-grid p {
+  margin-top: 8px; color: var(--ink-soft); font-size: 12px; line-height: 1.7;
+}
+
 /* ---------- CONTACT PAGE ---------- */
 .contact-page { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(40px, 7vw, 100px); align-items: start; }
 .contact-page h1 {
@@ -420,6 +455,7 @@ button:focus-visible,
   .hero-frame { max-height: none; }
   .hero-frame img { max-height: 55vh; }
   .about-preview, .about-page, .contact-page, .photo-detail, .cta-grid { grid-template-columns: 1fr; }
+  .profile-skills-grid { grid-template-columns: 1fr; }
   .photo-meta { position: static; }
   .photo-frame img { max-height: 68vh; }
   .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
